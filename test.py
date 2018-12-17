@@ -15,6 +15,7 @@ def test_program(program_name, test_file):
     p = Popen("./%s.out" % program_name, stdin=test_file_in, stdout=PIPE)
     stdout, stderr = p.communicate()
 
+    stdout = stdout.decode()
     if stdout.rstrip() == test_file_out_data.rstrip():
         print("  * OK [%0.3fs]" % (time.time()-time1))
     else:
