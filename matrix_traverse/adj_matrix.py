@@ -1,6 +1,25 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/env python
 
+# Libraries Included:
+# Numpy, Scipy, Scikit, Pandas
+#
+# Given a 2D matrix of letters, find if a given word exists in the matrix.
+# The word can be constructed from letters of sequentially adjacent cell, where
+# "adjacent" cells are those horizontally #or vertically neighboring.
+#
+# For example,
+# Given board =
+# arrarr = [
+#   ['A','B','C','E'],
+#   ['S','F','C','S'],
+#   ['A','D','E','E']
+#  ]
+# word = "ABCCED", -> returns true,
+# word = "SEE", -> returns true,
+# word = "ABCB", -> returns false.
+# word = "ABA", -> returns false.
+
 import numpy as np
 
 
