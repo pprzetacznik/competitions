@@ -1,0 +1,1 @@
+class SFI{public static void main(String[]s){for(int i:new int[8])System.out.println("http://sfi.org.pl");}}//http://sfi.org.pl
