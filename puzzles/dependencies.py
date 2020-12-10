@@ -40,7 +40,7 @@ def check_conflicts(package: Package, verbose: bool = False) -> Conflicts:
     return result
 
 
-class TestAdjMatrix(TestCase):
+class TestDependencies(TestCase):
     def test_check_conflictss(self) -> None:
         package1 = Package("package1", "1.0", set([]))
         package1_conf = Package("package1", "2.0", set([]))
