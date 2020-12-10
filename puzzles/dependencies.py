@@ -9,10 +9,7 @@ class Package:
     version: str
     dependencies_set: Set = field(hash=False)
 
-    def __repr__(self):
-        return f"{self.name}__{self.version}"
-
-    def __str__(self):
+    def __repr__(self) -> str:
         return f"{self.name}__{self.version}"
 
 
@@ -44,7 +41,7 @@ def check_conflicts(package: Package, verbose: bool = False) -> Conflicts:
 
 
 class TestAdjMatrix(TestCase):
-    def test_check_conflictss(self):
+    def test_check_conflictss(self) -> None:
         package1 = Package("package1", "1.0", set([]))
         package1_conf = Package("package1", "2.0", set([]))
         package2 = Package("package2", "3.0", set([package1]))
