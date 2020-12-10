@@ -41,7 +41,7 @@ def check_conflicts(package: Package, verbose: bool = False) -> Conflicts:
 
 
 class TestDependencies(TestCase):
-    def test_check_conflictss(self) -> None:
+    def test_check_conflicts(self) -> None:
         package1 = Package("package1", "1.0", set([]))
         package1_conf = Package("package1", "2.0", set([]))
         package2 = Package("package2", "3.0", set([package1]))
