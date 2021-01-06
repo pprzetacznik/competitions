@@ -32,16 +32,15 @@ class BombSolver:
         q.put((self.initial_state, "A", None))
         q.put((self.final_state, "B", None))
         while not q.empty():
-            (state, start, previous) = q.get()
+            state, start, previous = q.get()
             if state in visited_dict:
-                start_visited, previous_visited = visited_dict[state]
+                start_visited, _ = visited_dict[state]
                 if start is not start_visited:
                     return self._recreate_path(visited_dict, previous, state)
             else:
                 visited_dict[state] = start, previous
                 for neighbour in neighbours_graph[state]:
-                    if neighbour not in visited_dict:
-                        q.put((neighbour, start, state))
+                    q.put((neighbour, start, state))
         return None
 
     def _recreate_path(self, visited_dict, a_state, b_state) -> Path:
